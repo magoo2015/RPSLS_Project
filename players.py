@@ -1,13 +1,12 @@
-from human import Human
-from ai import Ai
+
+
 
 class Player:
 
     def __init__(self,player, wins):
-        self.player_1 = player
-        self.player_2 = player
+        self.player = player
         self.gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
-        self.wins = 0
+        self.wins = wins
 
     
     def get_player1_gesture(self, player1_gesture):
