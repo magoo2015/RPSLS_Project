@@ -1,4 +1,4 @@
-
+from player import Player
 
 
 
@@ -7,7 +7,10 @@
 class Rpsls_game:
 
     def __init__(self):
-        pass
+        self.player_1 = Player("Player 1")
+        self.player_2 = Player("Player 2")
+        self.AI_1 = Player("AI_one")
+        self.AI_2 = Player("AI_two")
 
 
     def display_welcome(self):
@@ -25,3 +28,12 @@ class Rpsls_game:
 
 
 
+    def rpsls_game(self, player_1, player_2):
+        self.player_1.gestures
+        pass
+
+
+
+    def start_game(self):
+        self.display_welcome()
+        self.display_rules
