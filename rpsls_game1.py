@@ -1,3 +1,4 @@
+from human import Human
 from players import Player
 
 
@@ -25,20 +26,40 @@ class Rpsls_game:
          print("Each game will be the best of three games")
          print("Use the number keys to make your selection.\n\n")
 
-         print("\n\nHere are the gesture conditions:\n\nScissors cut Paper\nPaper covers Rock\nLizard poisons Spock\nSpock smashes scissors\nScissors decapitates Lizard\nLizard eats Paper\nPaper disproves Spock\nSpock vaporizes Rock\nRock crushes Scissors")
+         print("""\n\nHere are the gesture conditions:\n\n
+         Scissors cut Paper
+         Paper covers Rock
+         Lizard poisons Spock
+         Spock smashes scissors
+         Scissors decapitates Lizard
+         Lizard eats Paper
+         Paper disproves Spock
+         Spock vaporizes Rock
+         Rock crushes Scissors
+         """)
+    
 
-
-
-    def rpsls_game(self, player_1, player_2):
-        gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
-        
-
+    def choose_players(self):
+       
         pass
 
-    def one_player(self):
+
+    def human_ai(self):
+        pass
+
+    #maybe just a human and ai method?
+    def human_human(self):
+        self.player_1 = Human("Player 1", 0)
+        self.player_2 = Human("Player 2", 0)
+        pass
 
 
+    def ai_ai(self):
+        pass
 
+    def play_game():
+
+ 
 
     def start_game(self):
         self.display_welcome()
