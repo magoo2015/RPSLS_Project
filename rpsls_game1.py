@@ -68,6 +68,8 @@ class Rpsls_game:
             elif self.player_1.gestures == 0 and self.AI_1.gestures == 1:
                 print("You lose!")
                 self.AI_1.wins += 1
+                if self.AI_1.wins or self.player_1.wins == 2:
+                    print ("AI wins!")
             elif self.player_1.gestures == 0 and self.AI_1.gestures == 2:
                 print("You win")
                 self.player_1.wins += 1
