@@ -46,9 +46,7 @@ class Rpsls_game:
     def choose_players(self):
 
         self.num_of_players = input("How many players? Choose 1, 2, or 3 for AI vs AI ! ")
-        print(type(self.num_of_players))
-
-    
+        
         if self.num_of_players == "1":
             return self.human_vs_ai()
         elif self.num_of_players == "2":
@@ -59,6 +57,58 @@ class Rpsls_game:
     def human_vs_ai(self):
         self.player_1 = Human("Player1", 0)
         self.AI_1 = Ai("Ai", 0)
+        game_on = True
+
+        while game_on:
+
+            self.player_1.get_gestures()
+            self.AI_1.ai_gestures()
+            if self.player_1.gestures == self.AI_1.gestures:
+                print("It's a tie!")
+            elif self.player_1.gestures == 0 and self.AI_1.gestures == 1:
+                print("You lose!")
+                self.AI_1.wins += 1
+            elif self.player_1.gestures == 0 and self.AI_1.gestures == 2:
+                print("You win")
+                self.player_1.wins += 1
+            elif self.player_1.gestures == 0 and self.AI_1.gestures == 3:
+                print("You win")
+            elif self.player_1.gestures == 0 and self.AI_1.gestures == 4:
+                print("You lose")
+            elif self.player_1.gestures == 1 and self.AI_1.gestures == 0:
+                print("You win!")
+            elif self.player_1.gestures == 1 and self.AI_1.gestures == 2:
+                print("You lose")
+            elif self.player_1.gestures == 1 and self.AI_1.gestures == 3:
+                print("You lose")
+            elif self.player_1.gestures == 1 and self.AI_1.gestures == 4:
+                print("You win")
+            elif self.player_1.gestures == 2 and self.AI_1.gestures == 0:
+                print("You lose!")
+            elif self.player_1.gestures == 2 and self.AI_1.gestures == 1:
+                print("You win")
+            elif self.player_1.gestures == 2 and self.AI_1.gestures == 3:
+                print("You win")
+            elif self.player_1.gestures == 2 and self.AI_1.gestures == 4:
+                print("You lose")
+            elif self.player_1.gestures == 3 and self.AI_1.gestures == 0:
+                print("lose")
+            elif self.player_1.gestures == 3 and self.AI_1.gestures == 1:
+                print("You win")
+            elif self.player_1.gestures == 3 and self.AI_1.gestures == 2:
+                print("You lose!")
+            elif self.player_1.gestures == 3 and self.AI_1.gestures == 4:
+                print("You win")
+            elif self.player_1.gestures == 4 and self.AI_1.gestures == 0:
+                print("You win")
+            elif self.player_1.gestures == 4 and self.AI_1.gestures == 1:
+                print("You lose")
+            elif self.player_1.gestures == 4 and self.AI_1.gestures == 2:
+                print("You win")
+            elif self.player_1.gestures == 4 and self.AI_1.gestures == 3:
+                print("You lose")
+
+
 
     
     def human_vs_human(self):
