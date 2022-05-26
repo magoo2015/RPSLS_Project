@@ -20,5 +20,9 @@ class Player:
         """)
         self.gestures = int(input("Choose your gesture. "))
         print("")
-        print(f"{self.player} chose {self.choice[self.gestures]}")
+        if self.gestures not in range(0, 5):
+            print("Invalid choice, please choose again")
+            self.get_gestures()
+        elif self.gestures in range(0, 5):
+            print(f"{self.player} chose {self.choice[self.gestures]}")
         #return self.gestures
