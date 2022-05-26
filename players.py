@@ -1,6 +1,8 @@
 
 
 
+import time
+
 class Player:
 
     def __init__(self,player, wins):
@@ -25,4 +27,5 @@ class Player:
             self.get_gestures()
         elif self.gestures in range(0, 5):
             print(f"{self.player} chose {self.choice[self.gestures]}")
+            time.sleep(2)
         #return self.gestures

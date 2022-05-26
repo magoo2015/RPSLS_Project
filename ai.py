@@ -1,5 +1,6 @@
 from players import Player
 import random
+import time
 
 class Ai(Player):
     
@@ -12,6 +13,7 @@ class Ai(Player):
         print("")
         print(f"{self.player} chose {self.choice[self.gestures]}")
         print("")
+        time.sleep(2)
         return self.gestures
 
     

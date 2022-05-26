@@ -1,6 +1,7 @@
 from ai import Ai
 from human import Human
 from players import Player
+import time
 
 
 
@@ -58,6 +59,7 @@ class Rpsls_game:
             return self.ai_vs_ai()
 
     def human_vs_ai(self):
+        time.sleep(1)
         self.player_1 = Human("Player 1", 0)
         self.AI_1 = Ai("Ai", 0)
         game_on = True
@@ -184,6 +186,7 @@ class Rpsls_game:
 
     
     def human_vs_human(self):
+        time.sleep(1)
         self.player_1 = Human("Player 1", 0)
         self.player_2 = Human("Player 2",0)
         game_on = True
@@ -307,6 +310,7 @@ class Rpsls_game:
                     self.end_game()
 
     def ai_vs_ai(self):
+        time.sleep(1)
         self.AI_1 = Ai("Ai 1", 0)
         self.AI_2 = Ai("Ai 2", 0)
         game_on = True
@@ -423,6 +427,7 @@ class Rpsls_game:
                 self.AI_1.wins += 1
                 if self.AI_1.wins <= 1:
                     print("Time for round 2, first to two wins is the winner!")
+                    time.sleep(2)
                     game_on = True
                 elif self.AI_1.wins >= 2:
                     print("Ai 1 wins the game!")
@@ -431,6 +436,7 @@ class Rpsls_game:
 
     
     def end_game(self):
+        time.sleep(2)
         print("")
         print("Game Over!")
         
@@ -438,6 +444,8 @@ class Rpsls_game:
         
     def start_game(self):
         self.display_welcome()
+        time.sleep(2)
         self.display_rules()
+        time.sleep(2)
         self.choose_players()
         
