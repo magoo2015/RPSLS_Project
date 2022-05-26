@@ -5,10 +5,11 @@ class Player:
 
     def __init__(self,player, wins):
         self.player = player
-        self.gestures = []
+        self.choice = {0 : "Rock", 1: "Paper", 2 : "Scissors", 3 : "Lizard", 4 : "Spock"}
+        self.gestures = ""
         self.wins = wins
+         
 
-    
     def get_gestures(self):
         print("""
         Choose 0 for Rock.
@@ -18,4 +19,5 @@ class Player:
         Choose 4 for Spock.
         """)
         self.gestures = int(input("Choose your gesture. "))
-        return self.gestures
+        print(f"{self.player} chose {self.choice[self.gestures]}")
+        #return self.gestures

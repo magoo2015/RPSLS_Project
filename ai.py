@@ -9,6 +9,7 @@ class Ai(Player):
 
     def ai_gestures(self):
         self.gestures = random.randint(0, 5)
+        print(f"{self.player} chose {self.choice[self.gestures]}")
         return self.gestures
 
     

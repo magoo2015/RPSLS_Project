@@ -55,9 +55,10 @@ class Rpsls_game:
             return self.ai_vs_ai()
 
     def human_vs_ai(self):
-        self.player_1 = Human("Player1", 0)
+        self.player_1 = Human("Player 1", 0)
         self.AI_1 = Ai("Ai", 0)
         game_on = True
+        
 
         while game_on:
 
@@ -74,37 +75,107 @@ class Rpsls_game:
                 elif self.AI_1.wins >= 2:
                     print("AI wins the game!")
                     game_on = False
-
+                    self.end_game()
             elif self.player_1.gestures == 0 and self.AI_1.gestures == 4:
                 print("You lose!")
                 self.AI_1.wins += 1
+                if self.AI_1.wins <= 1:
+                    print("Time for round 2, first to two wins is the winner!")
+                    game_on = True
+                elif self.AI_1.wins >= 2:
+                    print("AI wins the game!")
+                    game_on = False
+                    self.end_game()
             elif self.player_1.gestures == 1 and self.AI_1.gestures == 2:
                 print("You lose!")
                 self.AI_1.wins += 1
+                if self.AI_1.wins <= 1:
+                    print("Time for round 2, first to two wins is the winner!")
+                    game_on = True
+                elif self.AI_1.wins >= 2:
+                    print("AI wins the game!")
+                    game_on = False
+                    self.end_game()
             elif self.player_1.gestures == 1 and self.AI_1.gestures == 3:
                 print("You lose!")
                 self.AI_1.wins += 1
+                if self.AI_1.wins <= 1:
+                    print("Time for round 2, first to two wins is the winner!")
+                    game_on = True
+                elif self.AI_1.wins >= 2:
+                    print("AI wins the game!")
+                    game_on = False
+                    self.end_game()
             elif self.player_1.gestures == 2 and self.AI_1.gestures == 0:
                 print("You lose!")
                 self.AI_1.wins += 1
+                if self.AI_1.wins <= 1:
+                    print("Time for round 2, first to two wins is the winner!")
+                    game_on = True
+                elif self.AI_1.wins >= 2:
+                    print("AI wins the game!")
+                    game_on = False
+                    self.end_game()
             elif self.player_1.gestures == 2 and self.AI_1.gestures == 4:
                 print("You lose!")
                 self.AI_1.wins += 1
+                if self.AI_1.wins <= 1:
+                    print("Time for round 2, first to two wins is the winner!")
+                    game_on = True
+                elif self.AI_1.wins >= 2:
+                    print("AI wins the game!")
+                    game_on = False
+                    self.end_game()
             elif self.player_1.gestures == 3 and self.AI_1.gestures == 0:
                 print("You lose!")
                 self.AI_1.wins += 1
+                if self.AI_1.wins <= 1:
+                    print("Time for round 2, first to two wins is the winner!")
+                    game_on = True
+                elif self.AI_1.wins >= 2:
+                    print("AI wins the game!")
+                    game_on = False
+                    self.end_game()
             elif self.player_1.gestures == 3 and self.AI_1.gestures == 2:
                 print("You lose!")
                 self.AI_1.wins += 1
+                if self.AI_1.wins <= 1:
+                    print("Time for round 2, first to two wins is the winner!")
+                    game_on = True
+                elif self.AI_1.wins >= 2:
+                    print("AI wins the game!")
+                    game_on = False
+                    self.end_game()
             elif self.player_1.gestures == 4 and self.AI_1.gestures == 1:
                 print("You lose")
                 self.AI_1.wins += 1
+                if self.AI_1.wins <= 1:
+                    print("Time for round 2, first to two wins is the winner!")
+                    game_on = True
+                elif self.AI_1.wins >= 2:
+                    print("AI wins the game!")
+                    game_on = False
+                    self.end_game()
             elif self.player_1.gestures == 4 and self.AI_1.gestures == 3:
                 print("You lose")
                 self.AI_1.wins += 1
+                if self.AI_1.wins <= 1:
+                    print("Time for round 2, first to two wins is the winner!")
+                    game_on = True
+                elif self.AI_1.wins >= 2:
+                    print("AI wins the game!")
+                    game_on = False
+                    self.end_game()
             else:
                 print("You win!")
                 self.player_1.wins += 1
+                if self.player_1.wins <= 1:
+                    print("Time for round 2, first to two wins is the winner!")
+                    game_on = True
+                elif self.player_1 >= 2:
+                    print("Player 1 wins the game!")
+                    game_on = False
+                    self.end_game()
 
 
 
