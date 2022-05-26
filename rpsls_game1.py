@@ -45,13 +45,16 @@ class Rpsls_game:
 
     def choose_players(self):
 
-        self.num_of_players = input("How many players? Choose 1, 2, or 3 for AI vs AI ! ")
-        
-        if self.num_of_players == "1":
+        self.num_of_players = int(input("How many players? Choose 1, 2, or 3 for AI vs AI ! "))
+
+        if self.num_of_players != 1 or self.num_of_players != 1 or self.num_of_players != 1:
+            print("This is not a vailid choose, please try again.")
+            self.choose_players()
+        elif self.num_of_players == 1:
             return self.human_vs_ai()
-        elif self.num_of_players == "2":
+        elif self.num_of_players == 1:
             return self.human_vs_human()
-        elif self.num_of_players == "3":
+        elif self.num_of_players == 1:
             return self.ai_vs_ai()
 
     def human_vs_ai(self):
@@ -172,7 +175,7 @@ class Rpsls_game:
                 if self.player_1.wins <= 1:
                     print("Time for round 2, first to two wins is the winner!")
                     game_on = True
-                elif self.player_1 >= 2:
+                elif self.player_1.wins >= 2:
                     print("Player 1 wins the game!")
                     game_on = False
                     self.end_game()
@@ -198,4 +201,4 @@ class Rpsls_game:
         self.display_welcome()
         self.display_rules()
         self.choose_players()
-        self.end_game()
+        

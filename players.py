@@ -19,5 +19,6 @@ class Player:
         Choose 4 for Spock.
         """)
         self.gestures = int(input("Choose your gesture. "))
+        print("")
         print(f"{self.player} chose {self.choice[self.gestures]}")
         #return self.gestures

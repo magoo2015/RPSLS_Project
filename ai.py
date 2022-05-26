@@ -8,7 +8,8 @@ class Ai(Player):
         pass
 
     def ai_gestures(self):
-        self.gestures = random.randint(0, 5)
+        self.gestures = random.randint(0, 4)
+        print("")
         print(f"{self.player} chose {self.choice[self.gestures]}")
         return self.gestures
 
