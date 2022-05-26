@@ -68,64 +68,43 @@ class Rpsls_game:
             elif self.player_1.gestures == 0 and self.AI_1.gestures == 1:
                 print("You lose!")
                 self.AI_1.wins += 1
-                if self.AI_1.wins or self.player_1.wins == 2:
-                    print ("AI wins!")
-            elif self.player_1.gestures == 0 and self.AI_1.gestures == 2:
-                print("You win")
-                self.player_1.wins += 1
-            elif self.player_1.gestures == 0 and self.AI_1.gestures == 3:
-                print("You win")
-                self.player_1.wins += 1
+                if self.AI_1.wins <= 1:
+                    print("Time for round 2, first to two wins is the winner!")
+                    game_on = True
+                elif self.AI_1.wins >= 2:
+                    print("AI wins the game!")
+                    game_on = False
+
             elif self.player_1.gestures == 0 and self.AI_1.gestures == 4:
-                print("You lose")
+                print("You lose!")
                 self.AI_1.wins += 1
-            elif self.player_1.gestures == 1 and self.AI_1.gestures == 0:
-                print("You win!")
-                self.player_1.wins += 1
             elif self.player_1.gestures == 1 and self.AI_1.gestures == 2:
-                print("You lose")
+                print("You lose!")
                 self.AI_1.wins += 1
             elif self.player_1.gestures == 1 and self.AI_1.gestures == 3:
-                print("You lose")
+                print("You lose!")
                 self.AI_1.wins += 1
-            elif self.player_1.gestures == 1 and self.AI_1.gestures == 4:
-                print("You win")
-                self.player_1.wins += 1
             elif self.player_1.gestures == 2 and self.AI_1.gestures == 0:
                 print("You lose!")
                 self.AI_1.wins += 1
-            elif self.player_1.gestures == 2 and self.AI_1.gestures == 1:
-                print("You win")
-                self.player_1.wins += 1
-            elif self.player_1.gestures == 2 and self.AI_1.gestures == 3:
-                print("You win")
-                self.player_1.wins += 1
             elif self.player_1.gestures == 2 and self.AI_1.gestures == 4:
-                print("You lose")
+                print("You lose!")
                 self.AI_1.wins += 1
             elif self.player_1.gestures == 3 and self.AI_1.gestures == 0:
-                print("lose")
+                print("You lose!")
                 self.AI_1.wins += 1
-            elif self.player_1.gestures == 3 and self.AI_1.gestures == 1:
-                print("You win")
             elif self.player_1.gestures == 3 and self.AI_1.gestures == 2:
                 print("You lose!")
                 self.AI_1.wins += 1
-            elif self.player_1.gestures == 3 and self.AI_1.gestures == 4:
-                print("You win")
-                self.player_1.wins += 1
-            elif self.player_1.gestures == 4 and self.AI_1.gestures == 0:
-                print("You win")
-                self.player_1.wins += 1
             elif self.player_1.gestures == 4 and self.AI_1.gestures == 1:
                 print("You lose")
                 self.AI_1.wins += 1
-            elif self.player_1.gestures == 4 and self.AI_1.gestures == 2:
-                print("You win")
-                self.player_1.wins += 1
             elif self.player_1.gestures == 4 and self.AI_1.gestures == 3:
                 print("You lose")
                 self.AI_1.wins += 1
+            else:
+                print("You win!")
+                self.player_1.wins += 1
 
 
 
@@ -139,9 +118,8 @@ class Rpsls_game:
         self.AI_2 = Ai("Ai_2", 0)
 
     
-
-    def play_game(self):
-        pass
+    def end_game(self):
+        print("Game Over!")
         
             
         
@@ -149,4 +127,4 @@ class Rpsls_game:
         self.display_welcome()
         self.display_rules()
         self.choose_players()
-        self.play_game()
+        self.end_game()

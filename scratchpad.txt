@@ -1,24 +1,66 @@
-
-    def rpsls_game(self, player_1, player_2):
-        self.g = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
-        self.player_1 = player_1
-        self.player_2 = player_2
-
-        game_on = True
-
-        while game_on:
-            
-            print("""
-            Pick 0 for Rock
-            Pick 1 for Paper
-            Pick 2 for Rock
-            Pick 3 for Scissors
-            Pick 4 for Lizard
-            Pick 5 for Spock
-            """)
-            gestures = input("What is your gesture")
-
-
-        
-
-        pass
+if self.player_1.gestures == self.AI_1.gestures:
+    print("It's a tie!")
+elif self.player_1.gestures == 0 and self.AI_1.gestures == 1:
+    print("You lose!")
+    self.AI_1.wins += 1
+    if self.AI_1.wins or self.player_1.wins == 2:
+        print ("AI wins!")
+elif self.player_1.gestures == 0 and self.AI_1.gestures == 2:
+    print("You win")
+    self.player_1.wins += 1
+elif self.player_1.gestures == 0 and self.AI_1.gestures == 3:
+    print("You win")
+    self.player_1.wins += 1
+elif self.player_1.gestures == 0 and self.AI_1.gestures == 4:
+    print("You lose")
+    self.AI_1.wins += 1
+elif self.player_1.gestures == 1 and self.AI_1.gestures == 0:
+    print("You win!")
+    self.player_1.wins += 1
+elif self.player_1.gestures == 1 and self.AI_1.gestures == 2:
+    print("You lose")
+    self.AI_1.wins += 1
+elif self.player_1.gestures == 1 and self.AI_1.gestures == 3:
+    print("You lose")
+    self.AI_1.wins += 1
+elif self.player_1.gestures == 1 and self.AI_1.gestures == 4:
+    print("You win")
+    self.player_1.wins += 1
+elif self.player_1.gestures == 2 and self.AI_1.gestures == 0:
+    print("You lose!")
+    self.AI_1.wins += 1
+elif self.player_1.gestures == 2 and self.AI_1.gestures == 1:
+    print("You win")
+    self.player_1.wins += 1
+elif self.player_1.gestures == 2 and self.AI_1.gestures == 3:
+    print("You win")
+    self.player_1.wins += 1
+elif self.player_1.gestures == 2 and self.AI_1.gestures == 4:
+    print("You lose")
+    self.AI_1.wins += 1
+elif self.player_1.gestures == 3 and self.AI_1.gestures == 0:
+    print("lose")
+    self.AI_1.wins += 1
+elif self.player_1.gestures == 3 and self.AI_1.gestures == 1:
+    print("You win")
+elif self.player_1.gestures == 3 and self.AI_1.gestures == 2:
+    print("You lose!")
+    self.AI_1.wins += 1
+elif self.player_1.gestures == 3 and self.AI_1.gestures == 4:
+    print("You win")
+    self.player_1.wins += 1
+elif self.player_1.gestures == 4 and self.AI_1.gestures == 0:
+    print("You win")
+    self.player_1.wins += 1
+elif self.player_1.gestures == 4 and self.AI_1.gestures == 1:
+    print("You lose")
+    self.AI_1.wins += 1
+elif self.player_1.gestures == 4 and self.AI_1.gestures == 2:
+    print("You win")
+    self.player_1.wins += 1
+elif self.player_1.gestures == 4 and self.AI_1.gestures == 3:
+    print("You lose")
+    self.AI_1.wins += 1
+else:
+    print("You lose!")
+    self.AI_1.wins += 1
