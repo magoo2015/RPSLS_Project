@@ -10,13 +10,13 @@ import time
 class Rpsls_game:
 
     def __init__(self):
-        self.player_1 = Player("Player 1", 0)
-        self.player_2 = Player("Player 2", 0)
-        self.AI_1 = Player("AI_one", 0)
-        self.AI_2 = Player("AI_two", 0)
+        self.player_1 = Human()
+        self.player_2 = Human()
+        self.AI_1 = Ai()
+        self.AI_2 = Ai()
         self.num_of_players = 0
-        self.player = ""
-        self.ai = ""
+        #self.player = ""
+        #self.ai = ""
 
 
 
@@ -60,15 +60,15 @@ class Rpsls_game:
 
     def human_vs_ai(self):
         time.sleep(1)
-        self.player_1 = Human("Player 1", 0)
-        self.AI_1 = Ai("Ai", 0)
+        #self.player_1 = Human("Player 1", 0)
+        #self.AI_1 = Ai("Ai", 0)
         game_on = True
         
 
         while game_on:
 
             self.player_1.get_gestures()
-            self.AI_1.ai_gestures()
+            self.AI_1.get_gestures()
             if self.player_1.gestures == self.AI_1.gestures:
                 print("It's a tie!")
             elif self.player_1.gestures == 0 and self.AI_1.gestures == 1:
@@ -187,8 +187,8 @@ class Rpsls_game:
     
     def human_vs_human(self):
         time.sleep(1)
-        self.player_1 = Human("Player 1", 0)
-        self.player_2 = Human("Player 2",0)
+        # self.player_1 = Human("Player 1", 0)
+        # self.player_2 = Human("Player 2",0)
         game_on = True
         
 
@@ -311,15 +311,15 @@ class Rpsls_game:
 
     def ai_vs_ai(self):
         time.sleep(1)
-        self.AI_1 = Ai("Ai 1", 0)
-        self.AI_2 = Ai("Ai 2", 0)
+        # self.AI_1 = Ai("Ai 1", 0)
+        # self.AI_2 = Ai("Ai 2", 0)
         game_on = True
         
 
         while game_on:
 
-            self.AI_1.ai_gestures()
-            self.AI_2.ai_gestures()
+            self.AI_1.get_gestures()
+            self.AI_2.get_gestures()
             if self.AI_1.gestures == self.AI_2.gestures:
                 print("It's a tie!")
             elif self.AI_1.gestures == 0 and self.AI_2.gestures == 1:
