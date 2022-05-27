@@ -4,8 +4,8 @@ import time
 
 class Ai(Player):
     
-    def __init__(self, players, wins):
-        super().__init__(players, wins)
+    def __init__(self, name):
+        super().__init__(name,)
         
         pass
 

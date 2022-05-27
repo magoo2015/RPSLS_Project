@@ -10,10 +10,10 @@ import time
 class Rpsls_game:
 
     def __init__(self):
-        self.player_1 = Human("Player 1", 0)
-        self.player_2 = Human("Player 2", 0)
-        self.AI_1 = Ai("Ai 1", 0)
-        self.AI_2 = Ai("Ai 2", 0)
+        self.player_1 = Human("Player 1")
+        self.player_2 = Human("Player 2")
+        self.AI_1 = Ai("Ai 1")
+        self.AI_2 = Ai("Ai 2")
         self.num_of_players = 0
         #self.player = ""
         #self.ai = ""
