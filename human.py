@@ -5,8 +5,7 @@ import time
 class Human(Player):
     def __init__(self, players, wins):
         super().__init__(players, wins)
-        self.player = players
-        self.wins = wins
+        
         
         
 
@@ -20,13 +19,13 @@ class Human(Player):
         Choose 3 for Lizard.
         Choose 4 for Spock.
         """)
-        self.gestures = int(input("Choose your gesture. "))
+        self.choice = int(input("Choose your gesture. "))
         print("")
-        if self.gestures not in range(0, 5):
+        if self.choice not in range(0, 5):
             print("Invalid choice, please choose again")
             self.get_gestures()
-        elif self.gestures in range(0, 5):
-            print(f"{self.player} chose {self.choice[self.gestures]}")
+        elif self.choice in range(0, 5):
+            print(f"{self.player} chose {self.gestures[self.choice]}")
             time.sleep(2)
         #return self.gestures
         

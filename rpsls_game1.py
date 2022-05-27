@@ -69,9 +69,9 @@ class Rpsls_game:
 
             self.player_1.get_gestures()
             self.AI_1.get_gestures()
-            if self.player_1.gestures == self.AI_1.gestures:
+            if self.player_1.choice == self.AI_1.choice:
                 print("It's a tie!")
-            elif self.player_1.gestures == 0 and self.AI_1.gestures == 1:
+            elif self.player_1.choice == 0 and self.AI_1.choice == 1:
                 print("You lose!")
                 self.AI_1.wins += 1
                 if self.AI_1.wins <= 1:
@@ -81,7 +81,7 @@ class Rpsls_game:
                     print("AI wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 0 and self.AI_1.gestures == 4:
+            elif self.player_1.choice == 0 and self.AI_1.choice == 4:
                 print("You lose!")
                 self.AI_1.wins += 1
                 if self.AI_1.wins <= 1:
@@ -91,7 +91,7 @@ class Rpsls_game:
                     print("AI wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 1 and self.AI_1.gestures == 2:
+            elif self.player_1.choice == 1 and self.AI_1.choice == 2:
                 print("You lose!")
                 self.AI_1.wins += 1
                 if self.AI_1.wins <= 1:
@@ -101,7 +101,7 @@ class Rpsls_game:
                     print("AI wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 1 and self.AI_1.gestures == 3:
+            elif self.player_1.choice == 1 and self.AI_1.choice == 3:
                 print("You lose!")
                 self.AI_1.wins += 1
                 if self.AI_1.wins <= 1:
@@ -111,7 +111,7 @@ class Rpsls_game:
                     print("AI wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 2 and self.AI_1.gestures == 0:
+            elif self.player_1.choice == 2 and self.AI_1.choice == 0:
                 print("You lose!")
                 self.AI_1.wins += 1
                 if self.AI_1.wins <= 1:
@@ -121,7 +121,7 @@ class Rpsls_game:
                     print("AI wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 2 and self.AI_1.gestures == 4:
+            elif self.player_1.choice == 2 and self.AI_1.choice == 4:
                 print("You lose!")
                 self.AI_1.wins += 1
                 if self.AI_1.wins <= 1:
@@ -131,7 +131,7 @@ class Rpsls_game:
                     print("AI wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 3 and self.AI_1.gestures == 0:
+            elif self.player_1.choice == 3 and self.AI_1.choice == 0:
                 print("You lose!")
                 self.AI_1.wins += 1
                 if self.AI_1.wins <= 1:
@@ -141,7 +141,7 @@ class Rpsls_game:
                     print("AI wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 3 and self.AI_1.gestures == 2:
+            elif self.player_1.choice == 3 and self.AI_1.choice == 2:
                 print("You lose!")
                 self.AI_1.wins += 1
                 if self.AI_1.wins <= 1:
@@ -151,7 +151,7 @@ class Rpsls_game:
                     print("AI wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 4 and self.AI_1.gestures == 1:
+            elif self.player_1.choice == 4 and self.AI_1.choice == 1:
                 print("You lose")
                 self.AI_1.wins += 1
                 if self.AI_1.wins <= 1:
@@ -161,7 +161,7 @@ class Rpsls_game:
                     print("AI wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 4 and self.AI_1.gestures == 3:
+            elif self.player_1.choice == 4 and self.AI_1.choice == 3:
                 print("You lose")
                 self.AI_1.wins += 1
                 if self.AI_1.wins <= 1:
@@ -196,9 +196,9 @@ class Rpsls_game:
 
             self.player_1.get_gestures()
             self.player_2.get_gestures()
-            if self.player_1.gestures == self.player_2.gestures:
+            if self.player_1.choice == self.player_2.choice:
                 print("It's a tie!")
-            elif self.player_1.gestures == 0 and self.player_2.gestures == 1:
+            elif self.player_1.choice == 0 and self.player_2.choice == 1:
                 print("You lose!")
                 self.player_2.wins += 1
                 if self.player_2.wins <= 1:
@@ -208,7 +208,7 @@ class Rpsls_game:
                     print("Player 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 0 and self.player_2.gestures == 4:
+            elif self.player_1.choice == 0 and self.player_2.choice == 4:
                 print("You lose!")
                 self.player_2.wins += 1
                 if self.player_2.wins <= 1:
@@ -218,7 +218,7 @@ class Rpsls_game:
                     print("Player 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 1 and self.player_2.gestures == 2:
+            elif self.player_1.choice == 1 and self.player_2.choice == 2:
                 print("You lose!")
                 self.player_2.wins += 1
                 if self.player_2.wins <= 1:
@@ -228,7 +228,7 @@ class Rpsls_game:
                     print("Player 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 1 and self.player_2.gestures == 3:
+            elif self.player_1.choice == 1 and self.player_2.choice == 3:
                 print("You lose!")
                 self.player_2.wins += 1
                 if self.player_2.wins <= 1:
@@ -238,7 +238,7 @@ class Rpsls_game:
                     print("Player 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 2 and self.player_2.gestures == 0:
+            elif self.player_1.choice == 2 and self.player_2.choice == 0:
                 print("You lose!")
                 self.player_2.wins += 1
                 if self.player_2.wins<= 1:
@@ -248,7 +248,7 @@ class Rpsls_game:
                     print("Player 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 2 and self.player_2.gestures == 4:
+            elif self.player_1.choice == 2 and self.player_2.choice == 4:
                 print("You lose!")
                 self.player_2.wins += 1
                 if self.player_2.wins <= 1:
@@ -258,7 +258,7 @@ class Rpsls_game:
                     print("Player 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 3 and self.player_2.gestures == 0:
+            elif self.player_1.choice == 3 and self.player_2.choice == 0:
                 print("You lose!")
                 self.player_2.wins += 1
                 if self.player_2.wins <= 1:
@@ -268,7 +268,7 @@ class Rpsls_game:
                     print("Player 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 3 and self.player_2.gestures == 2:
+            elif self.player_1.choice == 3 and self.player_2.choice == 2:
                 print("You lose!")
                 self.player_2.wins += 1
                 if self.player_2.wins <= 1:
@@ -278,7 +278,7 @@ class Rpsls_game:
                     print("Player 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 4 and self.player_2.gestures == 1:
+            elif self.player_1.choice == 4 and self.player_2.choice == 1:
                 print("You lose")
                 self.player_2.wins += 1
                 if self.player_2.wins <= 1:
@@ -288,7 +288,7 @@ class Rpsls_game:
                     print("Player 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.player_1.gestures == 4 and self.player_2.gestures == 3:
+            elif self.player_1.choice == 4 and self.player_2.choice == 3:
                 print("You lose")
                 self.player_2.wins += 1
                 if self.player_2.wins <= 1:
@@ -320,9 +320,9 @@ class Rpsls_game:
 
             self.AI_1.get_gestures()
             self.AI_2.get_gestures()
-            if self.AI_1.gestures == self.AI_2.gestures:
+            if self.AI_1.choice == self.AI_2.choice:
                 print("It's a tie!")
-            elif self.AI_1.gestures == 0 and self.AI_2.gestures == 1:
+            elif self.AI_1.choice == 0 and self.AI_2.choice == 1:
                 print("Ai 1 loses!")
                 self.AI_2.wins += 1
                 if self.AI_2.wins <= 1:
@@ -332,7 +332,7 @@ class Rpsls_game:
                     print("Ai 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.AI_1.gestures == 0 and self.AI_2.gestures == 4:
+            elif self.AI_1.choice == 0 and self.AI_2.choice == 4:
                 print("Ai 1 loses!")
                 self.AI_2.wins += 1
                 if self.AI_2.wins <= 1:
@@ -342,7 +342,7 @@ class Rpsls_game:
                     print("Ai 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.AI_1.gestures == 1 and self.AI_2.gestures == 2:
+            elif self.AI_1.choice == 1 and self.AI_2.choice == 2:
                 print("Ai 1 loses!")
                 self.AI_2.wins += 1
                 if self.AI_2.wins <= 1:
@@ -352,7 +352,7 @@ class Rpsls_game:
                     print("Ai 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.AI_1.gestures == 1 and self.AI_2.gestures == 3:
+            elif self.AI_1.choice == 1 and self.AI_2.choice == 3:
                 print("Ai 1 loses!")
                 self.AI_2.wins += 1
                 if self.AI_2.wins <= 1:
@@ -362,7 +362,7 @@ class Rpsls_game:
                     print("Ai 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.AI_1.gestures == 2 and self.AI_2.gestures == 0:
+            elif self.AI_1.choice == 2 and self.AI_2.choice == 0:
                 print("Ai 1 loses!")
                 self.AI_2.wins += 1
                 if self.AI_2.wins <= 1:
@@ -372,7 +372,7 @@ class Rpsls_game:
                     print("Ai 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.AI_1.gestures == 2 and self.AI_2.gestures == 4:
+            elif self.AI_1.choice == 2 and self.AI_2.choice == 4:
                 print("Ai loses!")
                 self.AI_2.wins += 1
                 if self.AI_2.wins <= 1:
@@ -382,7 +382,7 @@ class Rpsls_game:
                     print("Ai 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.AI_1.gestures == 3 and self.AI_2.gestures == 0:
+            elif self.AI_1.choice == 3 and self.AI_2.choice == 0:
                 print("Ai 1 loses!")
                 self.AI_2.wins += 1
                 if self.AI_2.wins <= 1:
@@ -392,7 +392,7 @@ class Rpsls_game:
                     print("Ai 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.AI_1.gestures == 3 and self.AI_2.gestures == 2:
+            elif self.AI_1.choice == 3 and self.AI_2.choice == 2:
                 print("Ai 1 loses!")
                 self.AI_2.wins += 1
                 if self.AI_2.wins <= 1:
@@ -402,7 +402,7 @@ class Rpsls_game:
                     print("Ai 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.AI_1.gestures == 4 and self.AI_2.gestures == 1:
+            elif self.AI_1.choice == 4 and self.AI_2.choice == 1:
                 print("Ai 1 loses")
                 self.AI_2.wins += 1
                 if self.AI_2.wins <= 1:
@@ -412,7 +412,7 @@ class Rpsls_game:
                     print("AI 2 wins the game!")
                     game_on = False
                     self.end_game()
-            elif self.AI_1.gestures == 4 and self.AI_2.gestures == 3:
+            elif self.AI_1.choice == 4 and self.AI_2.choice == 3:
                 print("Ai 1 loses")
                 self.AI_2.wins += 1
                 if self.AI_2.wins <= 1:
