@@ -3,8 +3,11 @@ from players import Player
 import time
 
 class Human(Player):
-    def __init__(self):
-        super().__init__("Player", 0)
+    def __init__(self, players, wins):
+        super().__init__(players, wins)
+        self.player = players
+        self.wins = wins
+        
         
 
 

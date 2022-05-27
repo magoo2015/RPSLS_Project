@@ -10,10 +10,10 @@ import time
 class Rpsls_game:
 
     def __init__(self):
-        self.player_1 = Human()
-        self.player_2 = Human()
-        self.AI_1 = Ai()
-        self.AI_2 = Ai()
+        self.player_1 = Human("Player 1", 0)
+        self.player_2 = Human("Player 2", 0)
+        self.AI_1 = Ai("Ai 1", 0)
+        self.AI_2 = Ai("Ai 2", 0)
         self.num_of_players = 0
         #self.player = ""
         #self.ai = ""
@@ -426,7 +426,7 @@ class Rpsls_game:
                 print("Ai 2 loses!")
                 self.AI_1.wins += 1
                 if self.AI_1.wins <= 1:
-                    print("Time for round 2, first to two wins is the winner!")
+                    print("Time for next round , first to two wins is the winner!")
                     time.sleep(2)
                     game_on = True
                 elif self.AI_1.wins >= 2:

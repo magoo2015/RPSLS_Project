@@ -4,8 +4,10 @@ import time
 
 class Ai(Player):
     
-    def __init__(self):
-        super().__init__("AI", 0)
+    def __init__(self, players, wins):
+        super().__init__(players, wins)
+        self.player = players
+        self.wins = wins
         pass
 
     def get_gestures(self):
